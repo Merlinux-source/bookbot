@@ -3,6 +3,10 @@ import errno
 # Consts
 ARGC = len (argv)
 
+def get_book_text(path):
+	with open(path) as f:
+		return f.read()
+
 def __main__():
     print("Hello world!")
     if (ARGC == 1):
