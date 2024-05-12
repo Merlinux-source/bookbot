@@ -7,6 +7,10 @@ def get_book_text(path):
 	with open(path) as f:
 		return f.read()
 
+def count_words(book_content):
+	return len(book_content.split())
+
+
 def __main__():
     print("Hello world!")
     if (ARGC == 1):
