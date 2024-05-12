@@ -10,6 +10,10 @@ def get_book_text(path):
 def count_words(book_content):
 	return len(book_content.split())
 
+def count_chars(book_content):
+    return len (book_content)
+
+
 
 def __main__():
     print("Hello world!")
