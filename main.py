@@ -15,6 +15,23 @@ def count_chars(book_content):
 
 
 
+def report_char_frequency(book_content):
+    book_content = book_content.lower()
+    unique_chars = {}
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for char in book_content:
+        if char not in alphabet:
+            continue
+
+        if char not in unique_chars:
+            unique_chars[char] = 1
+            continue
+        
+        unique_chars[char] += 1
+    # sort the dict
+    return dict(sorted(unique_chars.items(), key=lambda item: item[1], reverse=True))
+
+
 def __main__():
     print("Hello world!")
     if (ARGC == 1):
